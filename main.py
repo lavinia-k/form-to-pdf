@@ -32,7 +32,7 @@ SHEETS = discovery.build('sheets', 'v4', credentials=credentials)
 REPORT_ID = create_a_copy(REPORT_TEMPLATE, generated_content_folder_id, DRIVE)
 
 # 2. Duplicate report charts Google Sheet
-CHARTS_ID = create_a_copy(REPORT_CHART_TEMPLATE, generated_content_folder_id)
+CHARTS_ID = create_a_copy(REPORT_CHART_TEMPLATE, generated_content_folder_id, DRIVE)
 
 # 3. Get values from form (currently hardcoded)
 # TODO: Get from form
