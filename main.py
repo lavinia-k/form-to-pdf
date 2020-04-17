@@ -20,7 +20,7 @@ SCOPES = (
     'https://www.googleapis.com/auth/spreadsheets',
 )
 
-SERVICE_ACCOUNT_FILE = './service-account-key.json'
+SERVICE_ACCOUNT_FILE = './.secrets/service-account-key.json'
 credentials = service_account.Credentials.from_service_account_file(
     SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
