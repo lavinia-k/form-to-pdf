@@ -2,3 +2,5 @@ venv
 .idea
 .secrets
 __pycache__
+package
+*.zip
