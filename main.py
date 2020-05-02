@@ -14,7 +14,7 @@ TEMPLATE_PRESENTATION_ID = '1i3jbxK48AQmDMdYfdslPd3Emn7ydpCutiG9lVY32V8E'
 TEMPLATE_SPREADSHEET_ID = '1Q0NtNj3dkznONXEv8y8xaQU5cHwjw7aOYjYyCIRNesQ'
 
 
-### Google Auth ###
+# Google Auth #
 SCOPES = (
     'https://www.googleapis.com/auth/drive',
     'https://www.googleapis.com/auth/presentations',

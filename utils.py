@@ -131,7 +131,6 @@ charts = {
 reqs = []
 
 
-
 def create_a_copy(file_id, dest_folder_id, drive_api):
 
     filename_datetime_format = '%Y%m%d_%H%M%S'
