@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Lambda function form-to-pdf
+Resources:
+  formToPDFRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Description: Role to run formToPDFFunction
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+  formToPDFFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: Function which converts form data to google slide
+      Runtime: python3.6
+      Handler: index.handler
+      Timeout: 10
+      Role: !GetAtt formToPDFRole.Arn
+      Code:
+        ZipFile: |
+          import json
+
+          def handler(event, context):
+              # TODO implement
+              return {
+                  'statusCode': 200,
+                  'body': json.dumps('Hello from Lambda!')
+              }
